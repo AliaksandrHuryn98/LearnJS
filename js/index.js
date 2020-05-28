@@ -19,12 +19,12 @@
 
 // // console.log(arr[3]);
 
-// // // const result = confirm("может ты пидор?");
+// // // const result = confirm("может ты ...?");
 
 // // // alert(result);
 // // // если перед именем переменной поставить плюс то это уже number
 // // //+prompt = number 
-// // const answer = prompt("а может ты пидор","");
+// // const answer = prompt("а может ты ...","");
 
 // // alert(typeof(answer));
 
@@ -67,49 +67,76 @@ const personalMovieDB = {
     privat: false
 };
 
-const a = prompt("Последний фильм", ""),
-    b = prompt("Оценка", ""),
-    c = prompt("Последний фильм", ""),
-    d = prompt("Оценка", "");
+// const a = prompt("Последний фильм", ""),
+//     b = prompt("Оценка", ""),
+//     c = prompt("Последний фильм", ""),
+//     d = prompt("Оценка", "");
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+
+for (let i = 0; i < 2; i++) {
+
+    const a = prompt("Последний фильм", ""),
+        b = prompt("Оценка", "");
+
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('ok');
+    } else {
+        i--;
+    }
+
+
+}
+
+if (personalMovieDB.count < 5) {
+    console.log("мало");
+} else if (personalMovieDB.count == 5) {
+    console.log("норм");
+} else if (personalMovieDB.count > 5) {
+    console.log("много");
+} else {
+    console.log("хз");
+}
 
 console.log(personalMovieDB);
 
-(1 == 1) ? console.log('Ok'): console.log('ne ok');
-
-let num = 2;
-
-switch (num) {
-    case 1:
-        console.log('1');
-        break;
-    case 2: {
-        console.log('2');
-        break;
-    }
-    case 3:
-        console.log('1');
-        break;
-    default:
-        console.log('1');
-        break;
-}
-
-while (num < 100) {
-    console.log(num);
-    num++;
-}
 
 
-do {
-    console.log(num);
-    num--;
-}
-while (num >= 0);
+// (1 == 1) ? console.log('Ok'): console.log('ne ok');
 
-for (let i = 0; i <= 20; i++) {
-    console.log(num);
-    num--;
-}
+// let num = 2;
+
+// switch (num) {
+//     case 1:
+//         console.log('1');
+//         break;
+//     case 2: {
+//         console.log('2');
+//         break;
+//     }
+//     case 3:
+//         console.log('1');
+//         break;
+//     default:
+//         console.log('1');
+//         break;
+// }
+
+// while (num < 100) {
+//     console.log(num);
+//     num++;
+// }
+
+
+// do {
+//     console.log(num);
+//     num--;
+// }
+// while (num >= 0);
+
+// for (let i = 0; i <= 20; i++) {
+//     console.log(num);
+//     num--;
+// }
