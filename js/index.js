@@ -57,22 +57,59 @@
 
 "use strict";
 
-const numberOfFilms = +prompt("сколько фильмов ты посмотрел","");
+const numberOfFilms = +prompt("сколько фильмов ты посмотрел", "");
 
 const personalMovieDB = {
     count: numberOfFilms,
-    movies:{},
-    actors:{},
-    genres:{},
-    privat:false
-    };
+    movies: {},
+    actors: {},
+    genres: {},
+    privat: false
+};
 
-    const a = prompt("Последний фильм",""),
-          b = prompt("Оценка",""),
-          c = prompt("Последний фильм",""),
-          d = prompt("Оценка","");
+const a = prompt("Последний фильм", ""),
+    b = prompt("Оценка", ""),
+    c = prompt("Последний фильм", ""),
+    d = prompt("Оценка", "");
 
-          personalMovieDB.movies[a] = b;
-          personalMovieDB.movies[c] = d;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-          console.log(personalMovieDB);
+console.log(personalMovieDB);
+
+(1 == 1) ? console.log('Ok'): console.log('ne ok');
+
+let num = 2;
+
+switch (num) {
+    case 1:
+        console.log('1');
+        break;
+    case 2: {
+        console.log('2');
+        break;
+    }
+    case 3:
+        console.log('1');
+        break;
+    default:
+        console.log('1');
+        break;
+}
+
+while (num < 100) {
+    console.log(num);
+    num++;
+}
+
+
+do {
+    console.log(num);
+    num--;
+}
+while (num >= 0);
+
+for (let i = 0; i <= 20; i++) {
+    console.log(num);
+    num--;
+}
