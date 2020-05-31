@@ -142,30 +142,95 @@
 // }
 
 
-const str = "test";
+// const str = "test";
 
-console.log(str.toUpperCase());
-console.log(str);
+// console.log(str.toUpperCase());
+// console.log(str);
 
-const fruit = "Some fruit";
+// const fruit = "Some fruit";
 
-console.log(fruit.indexOf("fruit"));
+// console.log(fruit.indexOf("fruit"));
 
-const logg = "Hello world";
+// const logg = "Hello world";
 
-// console.log(logg.slice(6,11));
+// // console.log(logg.slice(6,11));
 
 
-// console.log(logg.slice(6));
+// // console.log(logg.slice(6));
 
-console.log(logg.substring(6,11));
+// console.log(logg.substring(6,11));
 
-console.log(logg.substr(6,5)); //position and amount of symbols
+// console.log(logg.substr(6,5)); //position and amount of symbols
 
-const num = 12.2;
+// const num = 12.2;
 
-console.log(Math.round(num));
+// console.log(Math.round(num));
 
-const test = "12.2px";
-console.log(parseInt(test));
-console.log(parseFloat(test));
+// const test = "12.2px";
+// console.log(parseInt(test));
+// console.log(parseFloat(test));
+
+let numberOfFilms;
+
+function start() {
+
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
+
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
+    }
+
+}
+
+start();
+
+console.log(numberOfFilms);
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: {},
+    privat: false
+};
+
+
+function rememberMyFIlms() {
+    for (let i = 0; i < 2; i++) {
+
+        const a = prompt("Последний фильм", ""),
+            b = prompt("Оценка", "");
+
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('ok');
+        } else {
+            i--;
+        }
+
+    }
+}
+
+rememberMyFIlms();
+
+function writeYourGenres() {
+    for (let i = 1; i < 4; i++) {
+        personalMovieDB.genres[i - 1] = prompt(`Ваш любимый жанр: ${i}`);
+
+        if (personalMovieDB.genres[i - 1] != null &&
+            personalMovieDB.genres[i - 1] != '') {} else {
+            i--;
+        }
+    }
+}
+
+writeYourGenres();
+
+function showMyDB(hidden) {
+
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+
+showMyDB(personalMovieDB.privat);
