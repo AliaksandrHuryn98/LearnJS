@@ -57,15 +57,15 @@
 
 "use strict";
 
-const numberOfFilms = +prompt("сколько фильмов ты посмотрел", "");
+// const numberOfFilms = +prompt("сколько фильмов ты посмотрел", "");
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: {},
-    privat: false
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: {},
+//     privat: false
+// };
 
 // const a = prompt("Последний фильм", ""),
 //     b = prompt("Оценка", ""),
@@ -75,32 +75,32 @@ const personalMovieDB = {
 // personalMovieDB.movies[a] = b;
 // personalMovieDB.movies[c] = d;
 
-for (let i = 0; i < 2; i++) {
+// for (let i = 0; i < 2; i++) {
 
-    const a = prompt("Последний фильм", ""),
-        b = prompt("Оценка", "");
+//     const a = prompt("Последний фильм", ""),
+//         b = prompt("Оценка", "");
 
-    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log('ok');
-    } else {
-        i--;
-    }
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('ok');
+//     } else {
+//         i--;
+//     }
 
 
-}
+// }
 
-if (personalMovieDB.count < 5) {
-    console.log("мало");
-} else if (personalMovieDB.count == 5) {
-    console.log("норм");
-} else if (personalMovieDB.count > 5) {
-    console.log("много");
-} else {
-    console.log("хз");
-}
+// if (personalMovieDB.count < 5) {
+//     console.log("мало");
+// } else if (personalMovieDB.count == 5) {
+//     console.log("норм");
+// } else if (personalMovieDB.count > 5) {
+//     console.log("много");
+// } else {
+//     console.log("хз");
+// }
 
-console.log(personalMovieDB);
+// console.log(personalMovieDB);
 
 
 
@@ -140,3 +140,13 @@ console.log(personalMovieDB);
 //     console.log(num);
 //     num--;
 // }
+
+
+const str = "test";
+
+console.log(str.toUpperCase());
+console.log(str);
+
+const fruit = "Some fruit";
+
+console.log(fruit.indexOf("fruit"));
