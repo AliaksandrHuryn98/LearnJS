@@ -264,6 +264,30 @@
 // learnJS('JavaScript',done);
 
 
+//-+-++-+-+-+-+-+-+-+-++-+-+-+-+-+-++-+-++-+-+-+++-+-
+// let counter = 0;
+
+// // console.log(options);
+
+// // // delete options.name;
+
+// // console.log(options);
+
+// for (let key in options) {
+//     if (typeof (options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`Св-во:${i} значение:${options[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//         console.log(`Св-во:${key} значение:${options[key]}`);
+//     counter++;
+//     }
+
+// }
+
+// console.log(counter);
+
 "use strict";
 
 const options = {
@@ -273,9 +297,19 @@ const options = {
     colors: {
         border: 'black',
         bg: 'red'
+    },
+
+    makeTest: function () {
+        console.log(Object.keys(options).sort());
     }
 };
 
-delete options.name;
 
-console.log(options);
+// console.log(Object.keys(options));
+// console.log(Object.keys(options).length);
+
+options.makeTest();
+
+const {border,bg} = options.colors;
+
+console.log(border);
