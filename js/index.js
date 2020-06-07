@@ -234,33 +234,48 @@
 // showMyDB(personalMovieDB.privat);
 
 
+// function first() {
+//     setTimeout(function () {
+//         console.log(1);
+//     }, 500);
+// }
+
+// function second() {
+//     console.log(2);
+// }
+
+// first();
+// second();
+
+// function learnJS(lang,callback){
+//     console.log(`I'm learning: ${lang}`);
+//     callback();
+// }
+
+// // learnJS('JavaScript',function () {
+// //     console.log("50% done");
+// // });
+
+// function done() {
+//     console.log("20% done");
+// }
+
+
+// learnJS('JavaScript',done);
+
+
 "use strict";
 
-function first() {
-    setTimeout(function () {
-        console.log(1);
-    }, 500);
-}
+const options = {
+    name: 'test',
+    width: 1024,
+    heigth: 1024,
+    colors: {
+        border: 'black',
+        bg: 'red'
+    }
+};
 
-function second() {
-    console.log(2);
-}
+delete options.name;
 
-first();
-second();
-
-function learnJS(lang,callback){
-    console.log(`I'm learning: ${lang}`);
-    callback();
-}
-
-// learnJS('JavaScript',function () {
-//     console.log("50% done");
-// });
-
-function done() {
-    console.log("20% done");
-}
-
-
-learnJS('JavaScript',done);
+console.log(options);
