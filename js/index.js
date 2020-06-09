@@ -288,28 +288,95 @@
 
 // console.log(counter);
 
+
+
+// const options = {
+//     name: 'test',
+//     width: 1024,
+//     heigth: 1024,
+//     colors: {
+//         border: 'black',
+//         bg: 'red'
+//     },
+
+//     makeTest: function () {
+//         console.log(Object.keys(options).sort());
+//     }
+// };
+
+
+// // console.log(Object.keys(options));
+// // console.log(Object.keys(options).length);
+
+// options.makeTest();
+
+// const {border,bg} = options.colors;
+
+// console.log(border);
+
 "use strict";
 
-const options = {
-    name: 'test',
-    width: 1024,
-    heigth: 1024,
-    colors: {
-        border: 'black',
-        bg: 'red'
-    },
+const arr = [1, 2, 3, 6, 8, 4, 7, 22, 11];
 
-    makeTest: function () {
-        console.log(Object.keys(options).sort());
+arr.sort(compareNum);
+
+function compareNum(a, b) {
+    return b - a;
+}
+
+console.log(arr);
+
+
+
+// arr[99]=0;
+// console.log(arr);
+// arr.pop();
+// arr.push(9);
+
+// console.log(arr);
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// for (let value of arr) {
+//     console.log(value);
+// }
+
+//forEach не может использовать continue и break
+
+// arr.forEach(function (item, i, array) {
+// console.log(`Номер: ${i} значение: ${item} из массива ${arr}`);
+// });
+
+
+// const srt = prompt("","");
+
+
+
+// const products = srt.split("/");
+
+// products.sort();
+
+// console.log(products.join(";"));
+
+const soldier = {
+    health: 500,
+    armor: 200,
+    sayHello: function () {
+        console.log("Hello");
     }
 };
 
+// const jonh = 
+// {
+//     health:100
+// };
 
-// console.log(Object.keys(options));
-// console.log(Object.keys(options).length);
+//jonh.__proto__ = soldier; old style
 
-options.makeTest();
+// Object.setPrototypeOf(jonh,soldier);
 
-const {border,bg} = options.colors;
+const jonh = Object.create(soldier);
 
-console.log(border);
+jonh.sayHello();
